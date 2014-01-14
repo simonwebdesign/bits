@@ -5,5 +5,5 @@ Tags: light, white, Blue, fluid-layout, custom-background, post-formats
 
 Change Log 
 
-01/14/14 - v.2.1.7 Minor Changes
-	Initial Commit
+01/14/14 - v.1.0.0 
+		Initial Commit
