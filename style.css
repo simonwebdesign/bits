@@ -6,7 +6,7 @@ Author: SWD
 Author URI: http://simonwebdesign.com
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0
+Version: 1.0.1
 Tags: light, white, black, gray, two-columns, right-sidebar, fluid-layout, custom-background, post-formats
 */
 
@@ -200,7 +200,6 @@ nav li a {
 .sidebaritem {
 		padding: 0px 0px 10px 0px;
 		margin: 0px 0px 10px 0px;
-		border-bottom: 1px dotted #ccc;
 }
 /* Post */
 /* ---------------------------------------------------------- */
@@ -256,18 +255,25 @@ video {
 		max-width: 100%;
 		width: 100%;
 }
-.wp-caption {
-		max-width: 95%;
-		height: auto;
-}
 img {
 		max-width: 100%;
 		height: auto;
 }
-.wp-caption img,
-.gallery-icon img {
-		max-width: 100%;
-		height: auto;
+.gallery-item {
+		text-align: center;
+		width: 100%;
+}
+.gallery-item img {
+		border: 0px;
+}
+dd.gallery-caption {
+		width: 100%;
+		font-size: 12px;
+}
+.single dd.gallery-caption {
+		width: 100%;
+		font-size: 12px;
+		color: grey;
 }
 .home .outer_wrap,
 .category .outer_wrap {
@@ -293,7 +299,6 @@ img {
 .home .content .post a,
 .archive .content .post a {
 		color: #fff;
-		border-bottom: #fff solid 1px;
 }
 .home .content .post a:hover,
 .archive .content .post a:hover {
@@ -488,40 +493,6 @@ path {
 		padding: 20px;
 		color: #848484;
 }
-/* Misc */
-/* ---------------------------------------------------------- */
-
-.gallery-caption {
-		width: 90%;
-		padding: 0px;
-		margin: 0 auto;
-}
-.bypostauthor {
-}
-.wp-caption-text {
-		font-size: 10px;
-		color: #777;
-		border: 1px solid #ddd;
-		text-align: center;
-		background-color: #f3f3f3;
-		padding: 0px;
-		margin: 0px 0px 20px 0px;
-		-moz-border-radius: 3px;
-		-khtml-border-radius: 3px;
-		-webkit-border-radius: 3px;
-		border-radius: 3px;
-}
-.wp-caption img {
-		margin: 0;
-		padding: 0;
-		border: 0 none;
-}
-.wp-caption-dd {
-		font-size: 11px;
-		line-height: 17px;
-		padding: 0 4px 5px;
-		margin: 0;
-}
 /* Comments */
 /* ---------------------------------------------------------- */
 h3#reply-title {
@@ -557,7 +528,6 @@ h3#reply-title {
 		-webkit-border-radius: 30px;
 		-moz-border-radius: 30px;
 		border-radius: 30px;
-		border: solid 5px #f3f3f3;
 }
 #comment-block {
 		padding: 0px;
@@ -596,7 +566,6 @@ a#cancel-comment-reply-link {
 		background: #ccc;
 		color: white;
 		padding: 5px!important;
- display:;
 		-webkit-border-radius: 3px;
 		-moz-border-radius: 3px;
 		border-radius: 3px;
@@ -724,7 +693,7 @@ body {
 }
 a,
 a:visited {
-		text-decoration: none;
+		text-decoration: underline;
 		color: #1B86D2;
 }
 a:hover {
@@ -828,7 +797,6 @@ h1 a {
 .headline {
 		padding-bottom: 9px;
 		margin: 20px 0 30px;
-		border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
@@ -857,10 +825,10 @@ dd {
 }
 dt {
 		font-weight: bold;
-		margin-top: 10px;
+		margin-top: 0px;
 }
 dd {
-		margin: 5px 0px 0px 20px;
+		margin: 5px 20px 0px 20px;
 }
 hr {
 		margin: 20px 0;
@@ -1106,7 +1074,6 @@ input[type="submit"] {
 .button[disabled] {
 		color: #333333;
 		background-color: #e6e6e6;
-		border: 1px solid #777777;
 }
 .button:hover,
 .button:focus {
@@ -1118,4 +1085,3 @@ input[type="submit"] {
 		outline: 5px auto -webkit-focus-ring-color;
 		outline-offset: -2px;
 }
-
