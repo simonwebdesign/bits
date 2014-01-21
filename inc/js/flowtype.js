@@ -56,3 +56,20 @@
       });
    };
 }(jQuery));
+
+// Site Specific Code
+jQuery(document).ready(function(){
+		jQuery('.entry-title').flowtype({
+			minFont : 24,
+			maxFont : 48,
+			fontRatio : 20,
+   lineRatio : 1.45
+		}); 
+
+		jQuery('p').flowtype({
+			minFont : 14,
+			maxFont : 18,
+			fontRatio : 30
+		}); 
+});
+

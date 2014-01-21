@@ -7,7 +7,7 @@ Author URI: http://simonwebdesign.com
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Version: 1.0.1
-Tags: light, white, black, gray, two-columns, right-sidebar, fluid-layout, custom-background, post-formats
+Tags: light, white, black, blue, fluid-layout, custom-background, post-formats
 */
 
 /* Contents
@@ -113,14 +113,14 @@ html {
 /* Header */
 /* ---------------------------------------------------------- */
 #header {
-		padding: 0px 0px 30px 0px;
+		padding: 0px 0px 0px 0px;
 }
 .outer_header_wrap {
 		max-width: 960px;
 		margin: 0 auto;
 }
 .inner_header_wrap {
-		padding: 10px;
+		padding: 0px;
 }
 /* Navigation */
 /* ---------------------------------------------------------- */
@@ -129,6 +129,7 @@ nav {
 		-webkit-border-radius: 8px 8px 8px 8px;
 		border-radius: 8px 8px 8px 8px;
 		overflow: hidden;
+		margin: 10px 0px 0px 0px;
 }
 nav a {
 		text-decoration: none;
@@ -239,6 +240,26 @@ nav li a {
  opacity: 1;
 }
 }
+.home #header,
+.home .top-line,
+.home .postdate,
+.home .entry-title,
+.home .post,
+.home .bread-crumb,
+.home .meta,
+.home .navigation,
+.home #footer,
+.archive #header,
+.archive .top-line,
+.archive .postdate,
+.archive .entry-title,
+.archive .post,
+.archive .bread-crumb,
+.archive .meta,
+.archive .navigation,
+.archive #footer {
+		visibility: hidden;
+}
 .postmetadata {
 		padding: 0px 0px 5px 0px;
 		color: #777777;
@@ -275,6 +296,10 @@ dd.gallery-caption {
 		font-size: 12px;
 		color: grey;
 }
+.wp-caption {
+		max-width: 100%;
+		height: auto;
+}
 .home .outer_wrap,
 .category .outer_wrap {
 }
@@ -286,7 +311,6 @@ dd.gallery-caption {
 .post,
 .type-post,
 .type-page {
-		visibility: hidden;
 		padding: 0x;
 		-webkit-border-radius: 8px 8px 8px 8px;
 		border-radius: 8px 8px 8px 8px;
@@ -322,7 +346,6 @@ dd.gallery-caption {
 		color: white;
 }
 .top-line {
-		visibility: hidden;
 		margin: 8px 0px 0px 0px;
 		padding: 0px 0px 48px 0px;
 		height: auto;
@@ -361,7 +384,6 @@ dd.gallery-caption {
 		margin-bottom: -28px;
 }
 .postdate {
-		visibility: hidden;
 		text-align: left;
 		padding: 0px 0px 0px 0px;
 		margin-left: auto;
@@ -487,7 +509,6 @@ path {
 
 #footer {
 		font-size: 14px;
-		visibility: hidden;
 		margin: 0px 0px 0px 0px;
 		text-align: center;
 		padding: 20px;
@@ -574,7 +595,6 @@ a#cancel-comment-reply-link {
 /* ---------------------------------------------------------- */
 
 .navigation {
-		visibility: hidden;
 		width: 100%;
 		text-align: center;
 		padding: 5px;

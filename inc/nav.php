@@ -1,12 +1,4 @@
-<?php
-/**
- * The template for Pagination.
- *
- * @package WordPress
- * @package Bits
- * @since Bits 1.0
- */
- ?>
+
  <div class="navigation flex_66">
  
  <?php

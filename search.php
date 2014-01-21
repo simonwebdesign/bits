@@ -9,7 +9,7 @@
 <div class="outer_wrap">
   <div class="inner_wrap">
     <div class="content">
-      <div class="flex_66">
+      <div class="flex_100">
         <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
         <div <?php post_class() ?>>
@@ -30,7 +30,6 @@
         </div>
         <?php endif; ?>
       </div>
-      <?php get_sidebar(); ?>
     </div>
   </div>
 </div>

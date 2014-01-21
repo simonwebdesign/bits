@@ -18,10 +18,7 @@ get_header(); ?>
             <?php the_time('G:i'); ?>
           </li>
           <li class="post-status-icon <?php if ( get_post_format() ) { echo get_post_format_string( get_post_format() ); } else { echo 'Standard'; } ?>">
-            <?php
-												$format = get_post_format();
-												get_template_part( 'icon', $format );
-												?>
+            <?php $format = get_post_format(); get_template_part( 'icon', $format ); ?>
           </li>
           <li class="postmonth">
             <?php the_time('m/d') ?>
@@ -42,7 +39,7 @@ get_header(); ?>
       <div class="flex_vert_pad"></div>
       <div class="flex_100">
         <div class="flex_100">
-          <div <?php post_class('slideDown') ?> id="post-<?php the_ID(); ?>">
+          <div <?php post_class() ?> id="post-<?php the_ID(); ?>">
             <div class="entry">
               <?php the_content(); ?>
             </div>

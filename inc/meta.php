@@ -1,12 +1,4 @@
-<?php
-/**
- * The template for Meta Info.
- *
- * @package WordPress
- * @package Bits
- * @since Bits 1.0
- */
- ?>
+
 
 <div class="meta">
   <span class="meta_author"><em>by</em>

@@ -5,7 +5,10 @@
  * @package Bits
  * @since Bits 1.0
  */
-
+// Set Content Width
+if ( ! isset( $content_width ) )
+	$content_width = 728;
+	
 function bits_setup(){
 	// Add RSS links to <head> section
 		add_theme_support( 'automatic-feed-links' );
@@ -25,9 +28,19 @@ function bits_setup(){
 }
 add_action( 'after_setup_theme', 'bits_setup' );
 
-// Set Content Width
-if ( ! isset( $content_width ) )
-	$content_width = 728;
+// Enqueue scripts and styles
+function bits_scripts() {
+		wp_enqueue_style( 'normalize', get_template_directory_uri() .'/inc/css/normalize.css' );
+		wp_enqueue_style( 'style', get_stylesheet_uri() );
+		wp_enqueue_style( 'media-queries', get_template_directory_uri() .'/inc/css/mediaqueries.css' );
+		wp_enqueue_style( 'to-top', get_template_directory_uri() .'/inc/css/to-top-jquery.css' );
+		wp_enqueue_script( 'retina', get_template_directory_uri() .'/inc/js/retina.js' );
+		wp_enqueue_script( 'menu', get_template_directory_uri() .'/inc/js/menu.js' );
+		wp_enqueue_script( 'to-top', get_template_directory_uri() .'/inc/js/to-top-jquery.js' );
+		wp_enqueue_script( 'fade-in', get_template_directory_uri() .'/inc/js/fadein.js' );
+		wp_enqueue_script( 'flow-type', get_template_directory_uri() . '/inc/js/flowtype.js', array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'bits_scripts' );
 
 // Odd Even Post Class
 function bits_post_class ( $classes ) {

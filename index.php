@@ -13,6 +13,8 @@ get_header(); ?>
     <div class="content">
       <div class="flex_100">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <?php if ( function_exists( 'sharing_display' ) ) remove_filter( 'the_content', 'sharing_display', 19 ); ?>
+								<?php if ( function_exists( 'sharing_display' ) ) remove_filter( 'the_excerpt', 'sharing_display', 19 ); ?>
         <div class="top-line"> </div>
         <div class="postdate center">
           <ul>
