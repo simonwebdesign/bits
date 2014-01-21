@@ -281,6 +281,7 @@ dd.gallery-caption {
 		max-width: 100%;
 		height: auto;
 }
+.wp-caption-text,.bypostauthor {}
 .home .outer_wrap,
 .category .outer_wrap {
 }
