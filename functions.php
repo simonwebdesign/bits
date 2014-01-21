@@ -28,8 +28,16 @@ function bits_setup(){
 }
 add_action( 'after_setup_theme', 'bits_setup' );
 
+// Menu Support
+function bits_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'bits_menu' );
+
 // Enqueue scripts and styles
 function bits_scripts() {
+		if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+		wp_enqueue_script( "jquery" );
 		wp_enqueue_style( 'normalize', get_template_directory_uri() .'/inc/css/normalize.css' );
 		wp_enqueue_style( 'style', get_stylesheet_uri() );
 		wp_enqueue_style( 'media-queries', get_template_directory_uri() .'/inc/css/mediaqueries.css' );
@@ -78,14 +86,6 @@ function bits_breadcrumb() {
 
 // Add Widgets
 function bits_widgets_init() {
-	register_sidebar(array(
-		'id' => 'main-sidebar',
-		'name' => 'Main Sidebar',
-		'before_widget' => '<div class="flex_100">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	));
 	register_sidebar(array(
 		'id' => 'footer-1',
 		'name' => 'Footer1',

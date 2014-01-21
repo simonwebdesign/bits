@@ -1,12 +1,12 @@
 /*   
 Theme Name: Bits
 Theme URI: http://bits.simonwebdesign.com/
-Description: Bits is a responsive time line theme licensed under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>. Typography is also resposive based on flowtype.js. This theme is based on the Simon WP Framework. Bits theme comes with custom icons in jpg and svg.
+Description: Bits is a responsive time line theme licensed under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>. Typography is also responsive based on flowtype.js. This theme is based on the Simon WP Framework. Bits theme comes with custom icons in jpg and svg. Theme menu displays only top level items. FlowType.JS by Simple Focus (http://simplefocus.com/) is licensed under the MIT License. Retina.js (http://retinajs.com/) is licensed under the MIT License.
 Author: SWD
 Author URI: http://simonwebdesign.com
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Version: 1.0.1
+Version: 1.0.2
 Tags: light, white, black, blue, fluid-layout, custom-background, post-formats
 */
 
@@ -15,7 +15,6 @@ Tags: light, white, black, blue, fluid-layout, custom-background, post-formats
  Global
  Header 
  Navigation
- Sidebar
  Post
  Meta
  Footer
@@ -129,7 +128,7 @@ nav {
 		-webkit-border-radius: 8px 8px 8px 8px;
 		border-radius: 8px 8px 8px 8px;
 		overflow: hidden;
-		margin: 10px 0px 0px 0px;
+		margin: 0px;
 }
 nav a {
 		text-decoration: none;
@@ -178,29 +177,11 @@ nav li a {
 }
 #navigation {
 		padding: 0px;
+		margin: 10px 0px 0px 0px;
 		background: #3983CA;
 		overflow: hidden;
-}
-/* Sidebar */
-/* ---------------------------------------------------------- */
-#sidebar {
-		margin: 0px 0px 0px 20px;
-}
-#sidebar img {
-		max-width: 100%;
-		height: auto;
-}
-#pages,
-#archives,
-#categories,
-#feeds,
-#sidebarmeta,
-#blogroll {
-		margin: 0px;
-}
-.sidebaritem {
-		padding: 0px 0px 10px 0px;
-		margin: 0px 0px 10px 0px;
+		-webkit-border-radius: 8px 8px 8px 8px;
+		border-radius: 8px 8px 8px 8px;
 }
 /* Post */
 /* ---------------------------------------------------------- */
@@ -311,24 +292,31 @@ dd.gallery-caption {
 .post,
 .type-post,
 .type-page {
-		padding: 0x;
+		padding: 0px;
 		-webkit-border-radius: 8px 8px 8px 8px;
 		border-radius: 8px 8px 8px 8px;
+}
+.page .post,
+.single .post {
+		padding: 20px;
 }
 .single .post.odd,
 .single .post.even {
 		color: #000;
 		background: #fff;
 }
+.search .content .post a,
 .home .content .post a,
 .archive .content .post a {
 		color: #fff;
 }
+.search .content .post a:hover,
 .home .content .post a:hover,
 .archive .content .post a:hover {
 		color: #f3f3f3;
 		border-bottom: 0px;
 }
+.search .content .post,
 .home .content .post,
 .archive .content .post {
 		color: white;
@@ -510,9 +498,21 @@ path {
 #footer {
 		font-size: 14px;
 		margin: 0px 0px 0px 0px;
-		text-align: center;
 		padding: 20px;
 		color: #848484;
+}
+.inner_footer_wrap {
+		margin: 0 auto;
+		max-width: 960px;
+		padding: 0px 10px 0px 10px;
+}
+.footer-widgets {
+		padding: 40px 0px 20px 0px;
+		text-align: left;
+}
+.footer-credit {
+		padding: 20px 0px 20px 0px;
+		text-align: center;
 }
 /* Comments */
 /* ---------------------------------------------------------- */
@@ -1067,7 +1067,7 @@ input[type="checkbox"]:focus {
 .button,
 input[type="submit"] {
 		display: inline-block;
-		padding: 16px;
+		padding: 8px 10px 8px 10px;
 		margin-bottom: 0;
 		font-size: 14px;
 		font-weight: 600;
@@ -1105,3 +1105,4 @@ input[type="submit"] {
 		outline: 5px auto -webkit-focus-ring-color;
 		outline-offset: -2px;
 }
+
