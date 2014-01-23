@@ -25,14 +25,11 @@ function bits_setup(){
 
 	// Editor Support
 		add_editor_style();
+		
+	// Menu Support
+		register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'after_setup_theme', 'bits_setup' );
-
-// Menu Support
-function bits_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu' ));
-}
-add_action( 'init', 'bits_menu' );
 
 // Enqueue scripts and styles
 function bits_scripts() {
